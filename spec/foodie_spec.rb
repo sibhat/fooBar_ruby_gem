@@ -1,4 +1,4 @@
-# require 'foodie'
+require 'foodie'
 
 RSpec.describe Foodie do
   it "has a version number" do
