@@ -18,5 +18,21 @@ module Foodie
                 File.dirname(__FILE__) + "/recipe"
             end
         end
+        class Model < Thor::Group
+            include Thor::Actions
+            argument :group, type: :string
+            argument :name, type: :string
+
+            def create_group
+                empty_directory(group)
+            end
+            def copy_recipe
+                template("recipe.txt", "#{group}/#{name}.rb")
+            end
+
+            def self.source_root
+                File.dirname(__FILE__) + "/recipe"
+            end
+        end
     end
 end

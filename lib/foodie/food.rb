@@ -3,7 +3,6 @@ require 'active_support/inflector'
 module Foodie
   class Error < StandardError; end
   class Food
-
     def self.potray (food)
       if food == "Broccoli"
          "Gross!"

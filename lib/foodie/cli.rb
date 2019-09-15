@@ -4,7 +4,7 @@ require 'foodie/generators/recipe'
 
 module Foodie
   class CLI < Thor
-    desc "portray ITEM", "Determines if a piece of food is gross or delicious"
+    desc "potray ITEM", "Determines if a piece of food is gross or delicious"
     def potray(name)
         puts Foodie::Food.potray(name)
     end
